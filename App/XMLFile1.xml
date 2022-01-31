@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmployeeDetails>
+	<FirstName>Sagar</FirstName>
+	<LastName>
+		<Shinde>Shinde</Shinde>
+	</LastName>
+	<EmailId>sagar@gmail.com</EmailId>
+	<Mobile>045555555</Mobile>
+	<Adress>135/140, Hindston Chowk, Brussels, Belgie </Adress>
+</EmployeeDetails>

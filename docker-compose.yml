@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.9-management-alpine
+    ports:
+      - 15672:15672
+  database:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=MyVerySecurePassword123
+    ports:
+      - 7610:7610
+  app:
+    image: ${DOCKER_REGISTRY-}app
+    build:
+      context: .
+      dockerfile: App\Dockerfile
+
+    links:
+      - rabbitmq
+      - database
